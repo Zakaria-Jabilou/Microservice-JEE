@@ -33,13 +33,8 @@ public class ContApplication implements CommandLineRunner {
 		System.out.println(m.getRef());
 
 		for(int i=1; i<2023; i++){
-			ticketrepo.save(new Ticket(null,"reference"+i ,i, (i%2 == 0) ? Statut.ACTIVER : Statut.DESACTIVER  ,m));
+			ticketrepo.save(new Ticket(null,"reference"+i ,i,(i%2 == 0) ? Statut.ACTIVER : Statut.DESACTIVER,m));
 
 		}
-
-
-
-
-
 	}
 }

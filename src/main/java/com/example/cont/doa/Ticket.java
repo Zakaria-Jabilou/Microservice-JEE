@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Ticket  {
+public class Ticket {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(length = 16, nullable = false, unique = true)

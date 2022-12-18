@@ -13,12 +13,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Match  {
+public class Match {
+
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(unique = true)
     private String ref;
     @Temporal(TemporalType.DATE)
+
     private Date date;
     private String lieu;
     private String fisrtequipe;
