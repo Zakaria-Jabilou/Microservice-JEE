@@ -53,7 +53,7 @@ public class ServiceImp implements ITicket,IMatch {
                     newone.add(x);
                 }
             });
-            if (newone.size() < 2022) {
+            if (newone.size() < 2022 && newone.size() !=0) {
                 for (Ticket x : t) {
                     if (x.getId() == i) {
                         x.setStatut(Statut.ACTIVER);
