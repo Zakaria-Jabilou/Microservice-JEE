@@ -1,0 +1,43 @@
+
+type  Query{
+    getEtudiant(id : ID) : Matche
+
+
+}
+type Mutation{
+    buytickets(id : Int) : String
+    updateticketes(id : Int,t :Ticket ) : String
+    testupdateticketes(id : Int,i : Int) : String
+
+}
+
+
+
+
+
+input Match{
+    ref:String,
+    date:String,
+    lieu:String,
+    fisrtequipe: String,
+    secondequipe: String,
+
+}
+
+input Ticket{
+    ref:String,
+    price:Float,
+    statut:String,
+
+}
+
+type Matche{
+
+    id:ID,
+    ref:String,
+    date:String ,#JJ/MM/AAAA
+    lieu:String ,
+    fisrtequipe: String,
+    secondequipe: String,
+
+}
