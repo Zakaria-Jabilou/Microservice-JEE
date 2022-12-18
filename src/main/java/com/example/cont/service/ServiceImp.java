@@ -54,10 +54,13 @@ public class ServiceImp implements ITicket,IMatch {
                 }
             });
             if (newone.size() < 2022 && newone.size() !=0) {
-                for (Ticket x : t) {
-                    if (x.getId() == i) {
-                        x.setStatut(Statut.ACTIVER);
-                        ticketrepo.save(x);
+                System.out.println(newone.size());
+                for (Ticket s : newone) {
+
+                    if (s.getId() == i) {
+                        System.out.println(s.getId());
+                        s.setStatut(Statut.ACTIVER);
+                        ticketrepo.save(s);
                         return "you just bought a ticket";
 
                     }

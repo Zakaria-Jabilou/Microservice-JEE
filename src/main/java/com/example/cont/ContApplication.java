@@ -32,8 +32,8 @@ public class ContApplication implements CommandLineRunner {
 		Match m = matchRepo.findByRef("zakaria");
 		System.out.println(m.getRef());
 
-		for(int i=1; i<2021; i++){
-			ticketrepo.save(new Ticket(null,"reference"+i ,i,Statut.ACTIVER,m));
+		for(int i=1; i<2023; i++){
+			ticketrepo.save(new Ticket(null,"reference"+i ,i, (i%2 == 0) ? Statut.ACTIVER : Statut.DESACTIVER  ,m));
 
 		}
 
