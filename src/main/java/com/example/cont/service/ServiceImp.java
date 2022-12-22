@@ -26,6 +26,11 @@ public class ServiceImp implements ITicket,IMatch {
     }
 
     @Override
+    public Match getmatch(Integer id) {
+        return matchRepo.findById(id).orElse(null);
+    }
+
+    @Override
     public String buyTicket(int i) {
         Ticket e = ticketrepo.findById(i).orElse(null);
         List<Ticket> t= ticketrepo.findAll();

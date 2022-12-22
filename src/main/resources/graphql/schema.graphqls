@@ -1,6 +1,6 @@
 
 type  Query{
-    getEtudiant(id : ID) : Matche
+    getmatch(id : ID) : Matche
 
 
 }
