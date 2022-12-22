@@ -45,6 +45,7 @@ public class ServiceImp implements ITicket,IMatch {
     @Override
     public String testbuyTicket(int id,int i) {
         Match m = matchRepo.findById(id).orElse(null);
+        Boolean check=true;
         if (m != null){
             List<Ticket> t = ticketrepo.findByMatch(m);
             List<Ticket> newone = new ArrayList<>();
@@ -61,9 +62,13 @@ public class ServiceImp implements ITicket,IMatch {
                         System.out.println(s.getId());
                         s.setStatut(Statut.ACTIVER);
                         ticketrepo.save(s);
+                        check=false;
                         return "you just bought a ticket";
 
                     }
+                }
+                if (check){
+                    return "ticket aleardy bought";
                 }
             }else {
                 return "not in stock";

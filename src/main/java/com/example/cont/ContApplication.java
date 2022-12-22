@@ -25,16 +25,16 @@ public class ContApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		matchRepo.save(
-				new Match(null,"zakaria",new Date(),"lieu","fisrtequipe","secondequipe")
-		);
+		//matchRepo.save(
+		//		new Match(null,"zakaria",new Date(),"lieu","fisrtequipe","secondequipe")
+		//);
 
-		Match m = matchRepo.findByRef("zakaria");
-		System.out.println(m.getRef());
+		//Match m = matchRepo.findByRef("zakaria");
+		//System.out.println(m.getRef());
 
-		for(int i=1; i<2023; i++){
-			ticketrepo.save(new Ticket(null,"reference"+i ,i,(i%2 == 0) ? Statut.ACTIVER : Statut.DESACTIVER,m));
+		//for(int i=1; i<2023; i++){
+		//	ticketrepo.save(new Ticket(null,"reference"+i ,i,(i%2 == 0) ? Statut.ACTIVER : Statut.DESACTIVER,m));
 
-		}
+		//}
 	}
 }

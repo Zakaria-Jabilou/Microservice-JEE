@@ -22,6 +22,7 @@ public class Match {
     @Temporal(TemporalType.DATE)
 
     private Date date;
+
     private String lieu;
     private String fisrtequipe;
     private String secondequipe;
